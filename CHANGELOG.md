@@ -1,6 +1,32 @@
 # Changelog
 statement is `() => {...}` or `object`.
 
+## [1.2] - 2019-07-12
+### Added
+
+```
+_.try({
+  try() {
+    statement
+  },
+  catch(e) {
+    statement
+  }
+});
+
+_.try({
+  try() {
+    statement
+  },
+  catch(e) {
+    statement
+  },
+  finally() {
+    statement
+  }
+});
+```
+
 ## [1.1.1] - 2019-07-12
 ### Fixed
 

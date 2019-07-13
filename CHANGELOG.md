@@ -1,6 +1,11 @@
 # Changelog
 statement is `() => {...}` or `object`.
 
+## [1.2.1] - 2019-07-13
+### Fixed
+
+Fixed an issue where `.then()` in `_.unless()` would be executed immediately.
+
 ## [1.2] - 2019-07-12
 ### Added
 

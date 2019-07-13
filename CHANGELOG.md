@@ -1,5 +1,49 @@
 # Changelog
-statement is `() => {...}` or `object`.
+## [1.3] - 2019-07-14
+### Added
+
+```
+_.array.map(array, function callback(currentValue[, index[, array]]) {
+  statement
+}[, thisArg]);
+```
+
+```
+_.array.reverse(array);
+```
+
+```
+_.array.pop(array);
+```
+
+```
+_.array.push(array, ...elements);
+```
+
+```
+_.array.shift(array);
+```
+
+```
+_.array.unshift(array, ...elements);
+```
+
+```
+_.array.sort(array[, compareFunction]);
+```
+
+```
+_.array.splice(array, start[, deleteCount, ...items]);
+```
+
+```
+_.array.fill(array, value[, start[, end]]);
+```
+
+```
+_.array.copyWithin(array, target[, start[, end]]);
+```
+
 
 ## [1.2.1] - 2019-07-13
 ### Fixed
@@ -18,7 +62,9 @@ _.try({
     statement
   }
 });
+```
 
+```
 _.try({
   try() {
     statement
@@ -42,8 +88,15 @@ Microsoft Edge support for `switch`
 
 ```
 _.switch(expression) (_ => {
-  _.when(value) (statement);
+  _.when(value) (callback or object);
   _.default() (statement);
+});
+```
+
+```
+_.case(expression) (_ => {
+  _.when(value) (callback or object);
+  _.default() (callback or object);
 });
 ```
 
@@ -51,28 +104,38 @@ _.switch(expression) (_ => {
 ### Added
 
 ```
-_.if(condition).then(statement) // if expression
-  .elseif(condition).then(statement) // elseif expression
-  .elseifnot(condition).then(statement) // elseifnot expression
-  .else(statement) // else expression
+_.if(condition).then(callback or object) // if expression
+  .elseif(condition).then(callback or object) // elseif expression
+  .elseifnot(condition).then(callback or object) // elseifnot expression
+  .else(callback or object) // else expression
+```
 
-_.if(condition).then(statement) // if expression
+```
+_.if(condition).then(callback or object) // if expression
   .end() // if expression end
+```
 
-_.ifnot(condition).then(statement) // ifnot expression
-  .elseif(condition).then(statement) // elseif expression
-  .elseifnot(condition).then(statement) // elseifnot expression
-  .else(statement) // else expression
+```
+_.ifnot(condition).then(callback or object) // ifnot expression
+  .elseif(condition).then(callback or object) // elseif expression
+  .elseifnot(condition).then(callback or object) // elseifnot expression
+  .else(callback or object) // else expression
+```
 
-_.ifnot(condition).then(statement) // ifnot expression
+```
+_.ifnot(condition).then(callback or object) // ifnot expression
   .end() // if expression end
+```
 
-_.unless(condition).then(statement) // unless exoression
-  .else(statement) // else expression
+```
+_.unless(condition).then(callback or object) // unless exoression
+  .else(callback or object) // else expression
+```
 
-_.unless(condition).then(statement) // unless exoression
+```
+_.unless(condition).then(callback or object) // unless exoression
   .end() // if expression end
 ```
   
 if, ifnot and unless:
-If you do not use `.else(statement)`, end it with `.end()`. It can not be used after `.else(statement)`.
+If you do not use `.else(callback or object)`, end it with `.end()`. It can not be used after `.else(callback or object)`.

@@ -1,4 +1,15 @@
 # Changelog
+## [1.3.1] - 2019-07-14
+### Code Changed
+
+Split file using ECMAScript 2015 import / export
+#### files
+- expr.js (main)
+- array.js
+- if.js
+- switch.js
+- try.js
+
 ## [1.3] - 2019-07-14
 ### Added
 

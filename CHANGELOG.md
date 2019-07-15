@@ -1,4 +1,9 @@
 # Changelog
+## [1.4] - 2019-07-15
+### Changed
+
+changed from `_.when(value)` to `_.when(...values)`.
+
 ## [1.3.1] - 2019-07-14
 ### Code Changed
 

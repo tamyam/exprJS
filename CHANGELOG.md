@@ -1,4 +1,65 @@
 # Changelog
+## [1.5] - 2019-07-16
+### Added
+#### range
+```
+_.range(end)
+```
+
+```
+_.range(start, end[, step])
+```
+
+#### itr
+```
+_.itr.toArray(arrayLike[, function mapFn(currentValue[, index[, array]]) {...}[, thisArg]])
+```
+
+```
+_.itr.each(itr, function callback(currentValue[, index[, itr]]) {...}[, thisArg])
+```
+
+#### array
+```
+_.array.entries(array)
+```
+
+```
+_.array.every(array, function callback(element[, index[, array]]) {...}[, thisArg])
+```
+
+```
+_.array.filter(array, function callback(element[, index[, array]]) {...}[, thisArg])
+```
+
+```
+_.array.find(array, function callback(element[, index[, array]]) {...}[, thisArg])
+```
+
+```
+_.array.findIndex(array, function callback(element[, index[, array]]) {...}[, thisArg])
+```
+
+```
+_.array.keys(array)
+```
+
+```
+_.array.reduce(array, function callback(accumulator, currentValue[, currentIndex[, array]]) {...}[, initialValue])
+```
+
+```
+_.array.reduceRight(array, function callback(accumulator, currentValue[, currentIndex[, array]]) {...}[, initialValue])
+```
+
+```
+_.array.some(array, function callback(element[, index[, array]]) {...}[, thisArg])
+```
+
+```
+_.array.values(array)
+```
+
 ## [1.4] - 2019-07-15
 ### Changed
 
@@ -76,21 +137,10 @@ _.try({
   },
   catch(e) {
     statement
-  }
-});
-```
-
-```
-_.try({
-  try() {
-    statement
-  },
-  catch(e) {
-    statement
-  },
+  }[,
   finally() {
     statement
-  }
+  }]
 });
 ```
 
